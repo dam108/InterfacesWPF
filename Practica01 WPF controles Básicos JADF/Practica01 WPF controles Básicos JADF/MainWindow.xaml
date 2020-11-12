@@ -1,0 +1,74 @@
+﻿<Window x:Class="Practica01_WPF_controles_Básicos_JADF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica01_WPF_controles_Básicos_JADF"
+        mc:Ignorable="d"
+        Title="Practia 01 WPF Doval Fraga, Jose Angel - Controles básicos" Height="505" Width="600" FontSize="14" ResizeMode="NoResize">
+    <Grid Margin="0,-4,0,4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="DNI" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Height="29" Width="34"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="29" Width="59"/>
+        <Label Content="Apellido 1" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Height="29" Width="73"/>
+        <Label Content="Apellid 2" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Height="29" Width="64"/>
+        <TextBox x:Name="dni_TextBox" HorizontalAlignment="Left" Height="23" Margin="110,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" TabIndex="0"/>
+        <TextBox x:Name="nombre_TextBox" HorizontalAlignment="Left" Height="23" Margin="110,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" TabIndex="1"/>
+        <TextBox x:Name="apellido1_TextBox" HorizontalAlignment="Left" Height="23" Margin="110,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" TabIndex="2"/>
+        <TextBox x:Name="apellido2_TextBox1" HorizontalAlignment="Left" Height="23" Margin="110,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" TabIndex="3"/>
+        <GroupBox Header="Permiso conducir" HorizontalAlignment="Left" Height="218" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267">
+            <StackPanel Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <CheckBox x:Name="A_CheckBox" IsThreeState="False" Content="A" Margin="5" TabIndex="4"/>
+                <CheckBox x:Name="B_CheckBox" IsThreeState="False" Content="B" Margin="5" TabIndex="5"/>
+                <CheckBox x:Name="C_CheckBox" IsThreeState="False" Content="C" Margin="5" TabIndex="6"/>
+                <CheckBox x:Name="D_CheckBox" IsThreeState="False" Content="D" Margin="5" TabIndex="7"/>
+                <CheckBox x:Name="E_CheckBox" IsThreeState="False" Content="E" Margin="5" TabIndex="8"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="sexo" HorizontalAlignment="Left" Height="110" Margin="10,25,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1">
+            <StackPanel Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <RadioButton x:Name="hombre_Rbtn" Content="Hombre" Margin="5" TabIndex="9"/>
+                <RadioButton x:Name="Mujer_Rbtn" Content="Mujer" Margin="5" TabIndex="10"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Titulación máxima" HorizontalAlignment="Left" Height="218" Margin="10,10,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1" Grid.Row="1">
+            <StackPanel HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="300">
+                <Grid Height="183" Margin="0,0,37,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="163*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton x:Name="Ninguna_Rbtn" Content="Ninguna" VerticalAlignment="Center" TabIndex="11"/>
+                    <RadioButton x:Name="eso_Rbtn" Content="ESO" Grid.Row="1" VerticalAlignment="Center" TabIndex="12"/>
+                    <RadioButton x:Name="bach_Rbtn" Content="Bachillerato" Grid.Row="2" VerticalAlignment="Center" TabIndex="13"/>
+                    <RadioButton x:Name="fp_Rbtn" Content="FP" Grid.Row="3" VerticalAlignment="Center" TabIndex="14"/>
+                    <RadioButton x:Name="uni_Rbtn" Content="Universitaria" Grid.Row="4" VerticalAlignment="Bottom" Margin="0,0,0,6" TabIndex="15"/>
+                    <RadioButton x:Name="otra_Rbtn" Content="Otra" Grid.Row="5" VerticalAlignment="Center" TabIndex="16" Checked="otra_Rbtn_Checked" Unchecked="otra_Rbtn_Unchecked"/>
+                    <TextBox x:Name="otra_TextBox" TextWrapping="Wrap" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" TabIndex="17"/>
+                </Grid>
+
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="guardar_Btn" Content="Guardar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="23" TabIndex="18" Click="guardar_Btn_Click"/>
+        <Button x:Name="buscar_Btn" Content="Buscar" HorizontalAlignment="Left" Margin="157,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="23" TabIndex="19" Click="buscar_Btn_Click"/>
+        <TextBox x:Name="buscar_TextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" TabIndex="20"/>
+
+    </Grid>
+</Window>
