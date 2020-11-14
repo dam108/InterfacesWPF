@@ -1,0 +1,33 @@
+﻿<Window x:Class="Practica02_B_WPF_Combo_PictureBox__JADF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica02_B_WPF_Combo_PictureBox__JADF"
+        mc:Ignorable="d"
+        Title="Practica02-B Doval Fraga, Jose Angel WPF Combobox" Height="450" Width="800" FontSize="14">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="209*"/>
+            <RowDefinition Height="210*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Información" Margin="20" >
+            <Grid Margin="20">
+                <Label Content="Provincia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+                <ComboBox HorizontalAlignment="Left" Margin="100,14,0,0" VerticalAlignment="Top" Width="590"/>
+                <ComboBox HorizontalAlignment="Left" Margin="100,48,0,0" VerticalAlignment="Top" Width="590"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Gestión información" Margin="20,20,20,24">
+            <Grid Margin="10">
+                <RadioButton Content="Eliminar localidad seleccionada" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="Modificar localidad seleccionada" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="Nueva Localidad" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+                <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="84,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="626"/>
+                <Button Content="EJECUTAR" HorizontalAlignment="Left" Padding="15" Margin="286,10,0,0" VerticalAlignment="Top" Height="64" Width="424"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
