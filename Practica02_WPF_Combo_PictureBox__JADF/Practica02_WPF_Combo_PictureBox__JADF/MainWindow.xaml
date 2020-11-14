@@ -5,34 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica02_WPF_Combo_PictureBox__JADF"
         mc:Ignorable="d"
-        Title=" Practica02 WPF Doval Fraga Jose Angel - ComboBox" Height="270" Width="790" Visibility="Visible">
-    <Window.Resources>
-        <!-- Estilo de página de botón -->
-        <Style TargetType="Button">
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="Foreground" Value="Chocolate"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <!-- Estilo de página de TextBox -->
-        <Style TargetType="TextBox">
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Aquamarine"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-    </Window.Resources>
+        Title=" Practica02 WPF Doval Fraga Jose Angel - ComboBox" Height="270" Width="790" Visibility="Visible"
+        Background="{DynamicResource GradienteBacgroundRojo}">
 
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF5AA5B6" Offset="0"/>
-                <GradientStop Color="#FF0E4D5B" Offset="0.823"/>
-            </LinearGradientBrush>
-        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="105*"/>
             <RowDefinition Height="105*"/>
@@ -70,5 +46,4 @@
             </StackPanel>
         </ScrollViewer>
     </Grid>
-
 </Window>

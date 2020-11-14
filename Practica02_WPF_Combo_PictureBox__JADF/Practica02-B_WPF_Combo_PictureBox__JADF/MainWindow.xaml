@@ -5,29 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica02_B_WPF_Combo_PictureBox__JADF"
         mc:Ignorable="d"
-        Title="Practica02-B Doval Fraga, Jose Angel WPF Combobox" Height="450" Width="800" FontSize="14">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="209*"/>
-            <RowDefinition Height="210*"/>
-        </Grid.RowDefinitions>
-        <GroupBox Header="Información" Margin="20" >
-            <Grid Margin="20">
-                <Label Content="Provincia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
-                <ComboBox HorizontalAlignment="Left" Margin="100,14,0,0" VerticalAlignment="Top" Width="590"/>
-                <ComboBox HorizontalAlignment="Left" Margin="100,48,0,0" VerticalAlignment="Top" Width="590"/>
-            </Grid>
-        </GroupBox>
-        <GroupBox Grid.Row="1" Header="Gestión información" Margin="20,20,20,24">
-            <Grid Margin="10">
-                <RadioButton Content="Eliminar localidad seleccionada" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <RadioButton Content="Modificar localidad seleccionada" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top"/>
-                <RadioButton Content="Nueva Localidad" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
-                <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="29" Margin="84,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="626"/>
-                <Button Content="EJECUTAR" HorizontalAlignment="Left" Padding="15" Margin="286,10,0,0" VerticalAlignment="Top" Height="64" Width="424"/>
-            </Grid>
-        </GroupBox>
-    </Grid>
+        Title="Practica02-B Doval Fraga, Jose Angel WPF Combobox" Height="420" Width="800" FontSize="14"
+        Background="{DynamicResource GradienteBacgroundRojo}"
+        >
+
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed"/>
+    </Window.CommandBindings>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="782" MinHeight="379">
+            <GroupBox Header="Información" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="742" MinHeight="137" >
+                <Grid Margin="20">
+                    <Label Content="Provincia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="provincias_ComboBox" HorizontalAlignment="Left" Margin="100,14,0,0" VerticalAlignment="Top" Width="590" TabIndex="0" ItemsSource="{Binding Provincias}" DisplayMemberPath="Nombre" SelectionChanged="provincias_ComboBox_SelectionChanged"/>
+                    <ComboBox x:Name="localidades_ComboBox" HorizontalAlignment="Left" Margin="100,48,0,0" VerticalAlignment="Top" Width="590" TabIndex="1" DisplayMemberPath="Nombre"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Header="Gestión información" Margin="20,20,20,24" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="742" MinHeight="151">
+                <Grid Margin="10">
+                    <RadioButton x:Name="eliminar_Localidad_Rbtn" Content="Eliminar localidad seleccionada" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" TabIndex="2"/>
+                    <RadioButton x:Name="modificar_Localidad_Rbtn" Content="Modificar localidad seleccionada" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" TabIndex="3"/>
+                    <RadioButton x:Name="nueva_Localidad_Rbtn" Content="Nueva Localidad" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" TabIndex="4"/>
+                    <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="nueva_Localidad_TextBox" HorizontalAlignment="Left" Height="29" Margin="84,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="626" TabIndex="6"/>
+                    <Button x:Name="ejecutar_Btn" Content="EJECUTAR" HorizontalAlignment="Left" Padding="15" Margin="286,10,0,0" VerticalAlignment="Top" Height="64" Width="424" TabIndex="7" Command="ApplicationCommands.New" />
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </ScrollViewer>
 </Window>

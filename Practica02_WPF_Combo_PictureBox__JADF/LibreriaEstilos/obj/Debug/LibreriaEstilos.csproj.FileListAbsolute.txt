@@ -1,0 +1,12 @@
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\bin\Debug\LibreriaEstilos.dll
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\bin\Debug\LibreriaEstilos.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.csprojAssemblyReference.cache
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.g.resources
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.Properties.Resources.resources
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.csproj.GenerateResource.cache
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.csproj.CoreCompileInputs.cache
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.dll
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos_MarkupCompile.cache
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\LibreriaEstilos_MarkupCompile.lref
+E:\Segundo Curso\Interfaces\WPF\Practica02_WPF_Combo_PictureBox__JADF\LibreriaEstilos\obj\Debug\Dictionario2.baml

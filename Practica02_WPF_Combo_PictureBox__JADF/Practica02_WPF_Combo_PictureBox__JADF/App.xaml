@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:Practica02_WPF_Combo_PictureBox__JADF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/libreriaestilos;component/dictionario.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica02_WPF_Combo_Pictur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica02-B_WPF_Combo_PictureBox__JADF", "Practica02-B_WPF_Combo_PictureBox__JADF\Practica02-B_WPF_Combo_PictureBox__JADF.csproj", "{9E54757B-2278-4AF8-A22A-9962F3BDA627}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaEstilos", "LibreriaEstilos\LibreriaEstilos.csproj", "{45D7A441-F281-44F1-9926-94866BC5E45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9E54757B-2278-4AF8-A22A-9962F3BDA627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E54757B-2278-4AF8-A22A-9962F3BDA627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E54757B-2278-4AF8-A22A-9962F3BDA627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D7A441-F281-44F1-9926-94866BC5E45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D7A441-F281-44F1-9926-94866BC5E45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D7A441-F281-44F1-9926-94866BC5E45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D7A441-F281-44F1-9926-94866BC5E45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
