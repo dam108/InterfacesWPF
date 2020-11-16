@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica04_WPF_ListView_JADF", "Practica04_WPF_ListView_JADF\Practica04_WPF_ListView_JADF.csproj", "{225FA452-8643-440A-98F1-B58AF3759295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria", "Libreria\Libreria.csproj", "{47749111-4AC5-48E0-8422-4659DECE6117}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{225FA452-8643-440A-98F1-B58AF3759295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225FA452-8643-440A-98F1-B58AF3759295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225FA452-8643-440A-98F1-B58AF3759295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225FA452-8643-440A-98F1-B58AF3759295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47749111-4AC5-48E0-8422-4659DECE6117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47749111-4AC5-48E0-8422-4659DECE6117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47749111-4AC5-48E0-8422-4659DECE6117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47749111-4AC5-48E0-8422-4659DECE6117}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {232AB1DC-FDD2-4605-8A3F-20256E7912FD}
+	EndGlobalSection
+EndGlobal

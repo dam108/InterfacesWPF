@@ -1,0 +1,11 @@
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\bin\Debug\Libreria.dll
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\bin\Debug\Libreria.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.csprojAssemblyReference.cache
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Diccionario.baml
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria_MarkupCompile.cache
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.g.resources
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.csproj.GenerateResource.cache
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.dll
+E:\Segundo Curso\Interfaces\WPF\Practica04_WPF_ListView_JADF\Libreria\obj\Debug\Libreria.pdb
