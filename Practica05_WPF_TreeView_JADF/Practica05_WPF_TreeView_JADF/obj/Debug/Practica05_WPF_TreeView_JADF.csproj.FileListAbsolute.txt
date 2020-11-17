@@ -1,0 +1,15 @@
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\bin\Debug\Practica05_WPF_TreeView_JADF.exe.config
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\bin\Debug\Practica05_WPF_TreeView_JADF.exe
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\bin\Debug\Practica05_WPF_TreeView_JADF.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.csprojAssemblyReference.cache
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\MainWindow.g.cs
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\App.g.cs
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF_MarkupCompile.cache
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF_MarkupCompile.lref
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\MainWindow.baml
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.g.resources
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.Properties.Resources.resources
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.csproj.GenerateResource.cache
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.csproj.CoreCompileInputs.cache
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.exe
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.pdb

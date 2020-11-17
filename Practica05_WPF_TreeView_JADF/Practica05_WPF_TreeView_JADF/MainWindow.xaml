@@ -1,0 +1,95 @@
+﻿<Window x:Class="Practica05_WPF_TreeView_JADF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica05_WPF_TreeView_JADF"
+        mc:Ignorable="d"
+        Title="Practica04 Doval Fraga Jose Angel WPF_ListView" Height="550" Width="1000"
+         FontFamily="Segoe UI Semibold" FontSize="14">
+    <!--Enlace a comandos personalizados-->
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:MainWindow.mostrarTrabajadoresCommand}"
+                    Executed="ExecutemostrarTrabajadoresCommand"
+                    CanExecute="CanExecutemostrarTrabajadoresCommand" />
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF59BDB4" Offset="0"/>
+                <GradientStop Color="#FF2E5350" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*"/>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+        <TreeView x:Name="trabajadores_TreeView" Margin="25" TabIndex="0">
+            <TreeViewItem Header="CUADRILLAS">
+                <TreeViewItem Header="LOCALIDAD: FERROL">
+                    <TreeViewItem Header="JEFE: DIEGO PEREZ"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="LOCALIDAD: BETANZOS">
+                    <TreeViewItem Header="JEFE: JOSE DOVAL">
+                        <TreeViewItem Header="1º OFICIAL: JUAN SANCHEZ">
+                            <TreeViewItem Header="2º OFICIAL: JESUS IGLESIAS"/>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="LOCALIDAD: SADA">
+                    <TreeViewItem Header="JEFE: MANUEL ORTEGA">
+                        <TreeViewItem Header="1º OFICIAL: MIGUEL CASTRO"/>
+                    </TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="LOCALIDAD: CORUÑA">
+                    <TreeViewItem Header="JEFE: PABLO SILVA"></TreeViewItem>
+                </TreeViewItem>
+            </TreeViewItem>
+                
+        </TreeView>
+
+        <Border Grid.Column="1" Margin="25" >
+
+            <StackPanel Orientation="Vertical">
+                <DockPanel Height="30">
+                    <Label Content="Localidad:" Margin="0,0,10,0"/>
+                    <TextBox x:Name="localidad_TextBox" Text="" Width="130"  FontFamily="Segoe UI Semibold" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="1"/>
+                    <Button x:Name="altaLocalidad_Btn" DockPanel.Dock="Right" Width="200" Content="Alta Localidad" TabIndex="2" />
+                    <Label />
+                </DockPanel>
+                <GroupBox Height="150" Header="Nuevo Empleado" Margin="0,10,0,0">
+                    <Grid>
+                        <Label Content="Nombre" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Apellido" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="nombre_TextBox" HorizontalAlignment="Left" Height="29" Margin="97,20,0,0" TextWrapping="Wrap"
+                                 Text="" VerticalAlignment="Top" Width="230" VerticalContentAlignment="Center" TabIndex="3" />
+                        <TextBox x:Name="Apellido_TextBox" HorizontalAlignment="Left" Height="29" Margin="98,70,0,0" TextWrapping="Wrap"
+                                 Text="" VerticalAlignment="Top" Width="229" VerticalContentAlignment="Center" TabIndex="4" />
+                        <Button x:Name="altaEmpleado_Btn" Content="Alta" HorizontalAlignment="Left" Margin="332,20,0,0" VerticalAlignment="Top" Width="92" Height="29" TabIndex="5"/>
+
+                    </Grid>
+                </GroupBox>
+                <DockPanel Height="30" Margin="0,10,0,0">
+                    <Label Content="Localidades:"  Margin="0,0,15,0"/>
+                    <ComboBox x:Name="localidades_ComboBox"  Width="175"  FontFamily="Segoe UI Semibold" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="6"/>
+                    <Button x:Name="trabajadores_Btn" DockPanel.Dock="Right" Width="150" Content="Trabajadores" TabIndex="7"
+                            Command="{x:Static local:MainWindow.mostrarTrabajadoresCommand}" />
+                    <Label />
+                </DockPanel>
+                <ListView x:Name="trabajadores_ListView"  Margin="0,10,0,0"  Height="229" TabIndex="8">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Nombre" Width="150" DisplayMemberBinding="{Binding Nombre}" />
+                            <GridViewColumn Header="Apellido" Width="150" DisplayMemberBinding="{Binding Apellido}" />
+                            <GridViewColumn Header="Cargo" Width="150" DisplayMemberBinding="{Binding Cargo}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </StackPanel>
+
+
+        </Border>
+
+    </Grid>
+</Window>
