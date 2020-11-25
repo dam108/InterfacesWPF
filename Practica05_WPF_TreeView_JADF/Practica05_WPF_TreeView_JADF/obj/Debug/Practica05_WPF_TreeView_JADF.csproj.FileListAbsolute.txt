@@ -13,3 +13,4 @@ E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_Tree
 E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.csproj.CoreCompileInputs.cache
 E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.exe
 E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\Practica05_WPF_TreeView_JADF.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica05_WPF_TreeView_JADF\Practica05_WPF_TreeView_JADF\obj\Debug\GeneratedInternalTypeHelper.g.cs

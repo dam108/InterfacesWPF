@@ -12,20 +12,18 @@ namespace Practica05_WPF_TreeView_JADF
         public string Apellido { get; set; }
         public string Localidad { get; set; }
         public string Cargo { get; set; }
-        public int Id_padre { get; set; }
 
-        public Trabajador(string nombre, string apellido, string localidad, string cargo, int ip)
+        public Trabajador(string nombre, string apellido, string localidad, string cargo)
         {
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Localidad = localidad;
             this.Cargo = cargo;
-            this.Id_padre = ip;
         }
 
         public override string ToString()
         {
-            return Nombre + ", " + Apellido + ", " + Localidad + ", " + Cargo + ", " + Id_padre.ToString();
+            return Nombre + ", " + Apellido + ", " + Localidad + ", " + Cargo;
         }
     }
 }

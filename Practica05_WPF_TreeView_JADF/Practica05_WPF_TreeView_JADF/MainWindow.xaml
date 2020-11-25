@@ -26,27 +26,71 @@
         </Grid.ColumnDefinitions>
 
         <TreeView x:Name="trabajadores_TreeView" Margin="25" TabIndex="0">
-            <TreeViewItem Header="CUADRILLAS">
-                <TreeViewItem Header="LOCALIDAD: FERROL">
-                    <TreeViewItem Header="JEFE: DIEGO PEREZ"></TreeViewItem>
-                </TreeViewItem>
-                <TreeViewItem Header="LOCALIDAD: BETANZOS">
-                    <TreeViewItem Header="JEFE: JOSE DOVAL">
-                        <TreeViewItem Header="1º OFICIAL: JUAN SANCHEZ">
-                            <TreeViewItem Header="2º OFICIAL: JESUS IGLESIAS"/>
-                        </TreeViewItem>
-                    </TreeViewItem>
-                </TreeViewItem>
-                <TreeViewItem Header="LOCALIDAD: SADA">
-                    <TreeViewItem Header="JEFE: MANUEL ORTEGA">
-                        <TreeViewItem Header="1º OFICIAL: MIGUEL CASTRO"/>
-                    </TreeViewItem>
-                </TreeViewItem>
-                <TreeViewItem Header="LOCALIDAD: CORUÑA">
-                    <TreeViewItem Header="JEFE: PABLO SILVA"></TreeViewItem>
-                </TreeViewItem>
-            </TreeViewItem>
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type local:Cuadrilla}" ItemsSource="{Binding Localidades}">
+                    <!--stackPanel-->
+                        <!--Imagen-->
+                        <!--Texto-->
+                    <TextBlock Text="{Binding Nombre}"/>
+                    <!-- Cierra stackPanel-->
+                    <HierarchicalDataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+                            <!--<Setter TargetName="arbolCuadrilla"
+                                    Property="Source"
+                                    Value="imagenes/carpeta.png"/>-->
+                        </DataTrigger>
+                    </HierarchicalDataTemplate.Triggers>
+                    
+                    <HierarchicalDataTemplate.ItemTemplate>
+                        <HierarchicalDataTemplate DataType="{x:Type local:Localidad}" ItemsSource="{Binding jefes}">
+                            <!--stackPanel-->
+                            <!--Imagen-->
+                            <!--Texto-->
+                            <TextBlock Text="{Binding Nombre}"/>
+                            <!-- Cierra stackPanel-->
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <HierarchicalDataTemplate DataType="{x:Type local:Jefe}" ItemsSource="{Binding primerosOficiales}">
+                                    <!--stackPanel-->
+                                    <!--Imagen-->
+                                    <!--Texto-->
+                                    <TextBlock Text="{Binding Descripcion}"/>
+                                    <!-- Cierra stackPanel-->
+                                    <HierarchicalDataTemplate.ItemTemplate>
+                                        <HierarchicalDataTemplate DataType="{x:Type local:Oficial1}" ItemsSource="{Binding segundosOficiales}">
+                                            <!--stackPanel-->
+                                            <!--Imagen-->
+                                            <!--Texto-->
+                                            <TextBlock Text="{Binding Descripcion}"/>
+                                            <!-- Cierra stackPanel-->
+                                            <HierarchicalDataTemplate.ItemTemplate>
+                                                <HierarchicalDataTemplate DataType="{x:Type local:Oficial2}">
+                                                    <!--stackPanel-->
+                                                    <!--Imagen-->
+                                                    <!--Texto-->
+                                                    <TextBlock Text="{Binding Descripcion}"/>
+                                                    <!-- Cierra stackPanel-->
+
+
+                                                </HierarchicalDataTemplate>
+                                            </HierarchicalDataTemplate.ItemTemplate>
+
+                                        </HierarchicalDataTemplate>
+                                    </HierarchicalDataTemplate.ItemTemplate>
+
+                                </HierarchicalDataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+
+                        </HierarchicalDataTemplate>
+                    </HierarchicalDataTemplate.ItemTemplate>
+                </HierarchicalDataTemplate>
+
+
+
+
                 
+                
+                
+            </TreeView.Resources>
         </TreeView>
 
         <Border Grid.Column="1" Margin="25" >
@@ -72,7 +116,8 @@
                 </GroupBox>
                 <DockPanel Height="30" Margin="0,10,0,0">
                     <Label Content="Localidades:"  Margin="0,0,15,0"/>
-                    <ComboBox x:Name="localidades_ComboBox"  Width="175"  FontFamily="Segoe UI Semibold" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="6"/>
+                    <ComboBox x:Name="localidades_ComboBox"  Width="175"  FontFamily="Segoe UI Semibold" FontSize="14" DisplayMemberPath="Nombre"
+                              VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="6"/>
                     <Button x:Name="trabajadores_Btn" DockPanel.Dock="Right" Width="150" Content="Trabajadores" TabIndex="7"
                             Command="{x:Static local:MainWindow.mostrarTrabajadoresCommand}" />
                     <Label />
