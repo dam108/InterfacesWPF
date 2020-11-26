@@ -12,8 +12,16 @@
         <CommandBinding Command="{x:Static local:MainWindow.mostrarTrabajadoresCommand}"
                     Executed="ExecutemostrarTrabajadoresCommand"
                     CanExecute="CanExecutemostrarTrabajadoresCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.añadirLocalidadCommand}"
+                    Executed="ExecuteañadirLocalidadCommand"
+                    CanExecute="CanExecuteañadirLocalidadCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.altaTrabajadorCommand}"
+                    Executed="ExecutealtaTrabajadorCommand"
+                    CanExecute="CanExecutealtaTrabajadorCommand" />
     </Window.CommandBindings>
+    
     <Grid>
+        
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF59BDB4" Offset="0"/>
@@ -28,78 +36,87 @@
         <TreeView x:Name="trabajadores_TreeView" Margin="25" TabIndex="0">
             <TreeView.Resources>
                 <HierarchicalDataTemplate DataType="{x:Type local:Cuadrilla}" ItemsSource="{Binding Localidades}">
-                    <!--stackPanel-->
-                        <!--Imagen-->
-                        <!--Texto-->
-                    <TextBlock Text="{Binding Nombre}"/>
-                    <!-- Cierra stackPanel-->
+                    <StackPanel Orientation="Horizontal">
+                        <Image x:Name="iconoCuadrilla" Source="/icons/carpetaCerrada.png" Height="16" Width="16" Margin="0,5,5,0"/>
+                        <TextBlock Text="{Binding Nombre}"/>
+                    </StackPanel>
                     <HierarchicalDataTemplate.Triggers>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
-                            <!--<Setter TargetName="arbolCuadrilla"
+                            <Setter TargetName="iconoCuadrilla"
                                     Property="Source"
-                                    Value="imagenes/carpeta.png"/>-->
+                                    Value="icons/carpetaAbierta.png"/>
                         </DataTrigger>
                     </HierarchicalDataTemplate.Triggers>
-                    
                     <HierarchicalDataTemplate.ItemTemplate>
                         <HierarchicalDataTemplate DataType="{x:Type local:Localidad}" ItemsSource="{Binding jefes}">
-                            <!--stackPanel-->
-                            <!--Imagen-->
-                            <!--Texto-->
-                            <TextBlock Text="{Binding Nombre}"/>
-                            <!-- Cierra stackPanel-->
+                            <StackPanel Orientation="Horizontal">
+                                <Image x:Name="iconoLocalidades" Source="/icons/carpetaCerrada.png" Height="16" Width="16" Margin="0,5,5,0"/>
+                                <TextBlock Text="{Binding Nombre}"/>
+                            </StackPanel>
+                            <HierarchicalDataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+                                    <Setter TargetName="iconoLocalidades"
+                                    Property="Source"
+                                    Value="icons/carpetaAbierta.png"/>
+                                </DataTrigger>
+                            </HierarchicalDataTemplate.Triggers>
                             <HierarchicalDataTemplate.ItemTemplate>
                                 <HierarchicalDataTemplate DataType="{x:Type local:Jefe}" ItemsSource="{Binding primerosOficiales}">
-                                    <!--stackPanel-->
-                                    <!--Imagen-->
-                                    <!--Texto-->
-                                    <TextBlock Text="{Binding Descripcion}"/>
-                                    <!-- Cierra stackPanel-->
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image x:Name="iconoJefe" Source="/icons/carpetaCerrada.png" Height="16" Width="16" Margin="0,5,5,0"/>
+                                        <TextBlock Text="{Binding Descripcion}"/>
+                                    </StackPanel>
+                                    <HierarchicalDataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+                                            <Setter TargetName="iconoJefe"
+                                                    Property="Source"
+                                                    Value="icons/carpetaAbierta.png"/>
+                                        </DataTrigger>
+                                    </HierarchicalDataTemplate.Triggers>
                                     <HierarchicalDataTemplate.ItemTemplate>
                                         <HierarchicalDataTemplate DataType="{x:Type local:Oficial1}" ItemsSource="{Binding segundosOficiales}">
-                                            <!--stackPanel-->
-                                            <!--Imagen-->
-                                            <!--Texto-->
-                                            <TextBlock Text="{Binding Descripcion}"/>
-                                            <!-- Cierra stackPanel-->
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image x:Name="iconoPrimerOficial" Source="/icons/carpetaCerrada.png" Height="16" Width="16" Margin="0,5,5,0"/>
+                                                <TextBlock Text="{Binding Descripcion}"/>
+                                            </StackPanel>
+                                            <HierarchicalDataTemplate.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+                                                    <Setter TargetName="iconoPrimerOficial"
+                                                    Property="Source"
+                                                    Value="icons/carpetaAbierta.png"/>
+                                                </DataTrigger>
+                                            </HierarchicalDataTemplate.Triggers>
                                             <HierarchicalDataTemplate.ItemTemplate>
                                                 <HierarchicalDataTemplate DataType="{x:Type local:Oficial2}">
-                                                    <!--stackPanel-->
-                                                    <!--Imagen-->
-                                                    <!--Texto-->
-                                                    <TextBlock Text="{Binding Descripcion}"/>
-                                                    <!-- Cierra stackPanel-->
-
-
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image x:Name="iconoSegundoOficial" Source="/icons/archivo.png" Height="16" Width="16" Margin="0,5,5,0"/>
+                                                        <TextBlock Text="{Binding Descripcion}"/>
+                                                    </StackPanel>
+                                                    <HierarchicalDataTemplate.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                                            <Setter TargetName="iconoSegundoOficial"
+                                                                    Property="Source"
+                                                                    Value="icons/archivoAbierto.png"/>
+                                                        </DataTrigger>
+                                                    </HierarchicalDataTemplate.Triggers>
                                                 </HierarchicalDataTemplate>
                                             </HierarchicalDataTemplate.ItemTemplate>
-
                                         </HierarchicalDataTemplate>
                                     </HierarchicalDataTemplate.ItemTemplate>
-
                                 </HierarchicalDataTemplate>
                             </HierarchicalDataTemplate.ItemTemplate>
-
                         </HierarchicalDataTemplate>
                     </HierarchicalDataTemplate.ItemTemplate>
                 </HierarchicalDataTemplate>
-
-
-
-
-                
-                
-                
             </TreeView.Resources>
         </TreeView>
-
         <Border Grid.Column="1" Margin="25" >
-
             <StackPanel Orientation="Vertical">
                 <DockPanel Height="30">
                     <Label Content="Localidad:" Margin="0,0,10,0"/>
                     <TextBox x:Name="localidad_TextBox" Text="" Width="130"  FontFamily="Segoe UI Semibold" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TabIndex="1"/>
-                    <Button x:Name="altaLocalidad_Btn" DockPanel.Dock="Right" Width="200" Content="Alta Localidad" TabIndex="2" />
+                    <Button x:Name="altaLocalidad_Btn" DockPanel.Dock="Right" Width="200" Content="Alta Localidad" TabIndex="2"
+                            Command="{x:Static local:MainWindow.añadirLocalidadCommand}"/>
                     <Label />
                 </DockPanel>
                 <GroupBox Height="150" Header="Nuevo Empleado" Margin="0,10,0,0">
@@ -110,8 +127,9 @@
                                  Text="" VerticalAlignment="Top" Width="230" VerticalContentAlignment="Center" TabIndex="3" />
                         <TextBox x:Name="Apellido_TextBox" HorizontalAlignment="Left" Height="29" Margin="98,70,0,0" TextWrapping="Wrap"
                                  Text="" VerticalAlignment="Top" Width="229" VerticalContentAlignment="Center" TabIndex="4" />
-                        <Button x:Name="altaEmpleado_Btn" Content="Alta" HorizontalAlignment="Left" Margin="332,20,0,0" VerticalAlignment="Top" Width="92" Height="29" TabIndex="5"/>
-
+                        <Button x:Name="altaEmpleado_Btn" Content="Alta" HorizontalAlignment="Left" Margin="332,20,0,0"
+                                VerticalAlignment="Top" Width="92" Height="29" TabIndex="5"
+                                Command="{x:Static local:MainWindow.altaTrabajadorCommand}"/>
                     </Grid>
                 </GroupBox>
                 <DockPanel Height="30" Margin="0,10,0,0">
@@ -132,9 +150,6 @@
                     </ListView.View>
                 </ListView>
             </StackPanel>
-
-
         </Border>
-
     </Grid>
 </Window>

@@ -25,12 +25,20 @@ namespace Practica05_WPF_TreeView_JADF
         public List<Trabajador> trabajadores;
 
         public static RoutedCommand mostrarTrabajadoresCommand = new RoutedCommand();
+        public static RoutedCommand añadirLocalidadCommand = new RoutedCommand();
+        public static RoutedCommand altaTrabajadorCommand = new RoutedCommand();
+        
+
         public MainWindow()
         {
             InitializeComponent();
 
             CommandBinding mostrarTrabajadoresCommandBinding = new CommandBinding(
                 mostrarTrabajadoresCommand, ExecutemostrarTrabajadoresCommand, CanExecutemostrarTrabajadoresCommand);
+            CommandBinding añadirLocalidadCommandBinding = new CommandBinding(
+                añadirLocalidadCommand, ExecuteañadirLocalidadCommand, CanExecuteañadirLocalidadCommand);
+            CommandBinding altaTrabajadorCommandBinding = new CommandBinding(
+                altaTrabajadorCommand, ExecutealtaTrabajadorCommand, CanExecutealtaTrabajadorCommand);
 
             CrearTreeView();
 
@@ -38,6 +46,76 @@ namespace Practica05_WPF_TreeView_JADF
 
             rellenarListaTrabajadores();
 
+        }
+
+        private void ExecutealtaTrabajadorCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+
+            if(trabajadores_TreeView.SelectedItem != null)
+            {
+                if (trabajadores_TreeView.SelectedItem is Oficial2)
+                {
+                    advertencia("No se puede añadir terceros oficiales");
+                }
+                else if (trabajadores_TreeView.SelectedItem is Oficial1)
+                {
+                    ((Oficial1)trabajadores_TreeView.SelectedItem).segundosOficiales.Add(
+                        new Oficial2(nombre_TextBox.Text, Apellido_TextBox.Text));
+                    limpiarCamposAlta();
+                }
+                else if (trabajadores_TreeView.SelectedItem is Jefe)
+                {
+                    ((Jefe)trabajadores_TreeView.SelectedItem).primerosOficiales.Add(
+                            new Oficial1(nombre_TextBox.Text, Apellido_TextBox.Text));
+                    limpiarCamposAlta();
+                }
+                else if (trabajadores_TreeView.SelectedItem is Localidad)
+                {
+                    if (((Localidad)trabajadores_TreeView.SelectedItem).jefes.Count > 0)
+                    {
+                        advertencia("ya existe un Jefe");
+                    }
+                    else
+                    {
+                        ((Localidad)trabajadores_TreeView.SelectedItem).jefes.Add(
+                            new Jefe(nombre_TextBox.Text, Apellido_TextBox.Text));
+                        limpiarCamposAlta();
+                    }
+                }
+                else if (trabajadores_TreeView.SelectedItem is Cuadrilla)
+                {
+                    advertencia("No se puede introducir un trabajador aqui!");
+                }
+                else advertencia("No se puede introducir un trabajador aqui!");
+            }
+
+            rellenarListaTrabajadores();
+        }
+
+        private void CanExecutealtaTrabajadorCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (nombre_TextBox.Text != "" && Apellido_TextBox.Text != "" 
+                && trabajadores_TreeView.SelectedItem != null) e.CanExecute = true;
+            else e.CanExecute = false;
+        }
+
+        private void ExecuteañadirLocalidadCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (!existeLocalidad(localidad_TextBox.Text))
+            {
+                añadirLocalidad(localidad_TextBox.Text);
+                localidad_TextBox.Clear();
+            }
+            else
+            {
+                advertencia("Esta localidad ya existe!");
+                localidad_TextBox.Clear();
+            }
+        }
+        private void CanExecuteañadirLocalidadCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+            if (localidad_TextBox.Text != "") e.CanExecute = true;
+            else e.CanExecute = false;
         }
 
         private void ExecutemostrarTrabajadoresCommand(object sender, ExecutedRoutedEventArgs e)
@@ -85,6 +163,8 @@ namespace Practica05_WPF_TreeView_JADF
 
         private void rellenarListaTrabajadores()
         {
+            trabajadores.Clear();
+
             foreach (var localidad in contexto[0].Localidades)
             {
                 foreach (var jefe in localidad.jefes)
@@ -105,7 +185,34 @@ namespace Practica05_WPF_TreeView_JADF
         
         }
 
+        private void añadirLocalidad(string txt)
+        {
+            contexto[0].Localidades.Add(new Localidad(txt));
+        }
 
+
+        private bool existeLocalidad(string localidad)
+        {
+            foreach (var item in contexto[0].Localidades)
+            {
+                if(localidad.ToUpper() == item.Nombre)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void advertencia(string txt)
+        {
+            MessageBox.Show(txt, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
+        private void limpiarCamposAlta()
+        {
+            nombre_TextBox.Clear();
+            Apellido_TextBox.Clear();
+        }
     }
 
     public class Cuadrilla
@@ -116,7 +223,7 @@ namespace Practica05_WPF_TreeView_JADF
         
         public Cuadrilla(string nombre)
         {
-            this.Nombre = nombre;
+            this.Nombre = nombre.ToUpper();
             this.Localidades = new ObservableCollection<Localidad>();
         }
 
@@ -129,7 +236,7 @@ namespace Practica05_WPF_TreeView_JADF
 
         public Localidad(string nombre)
         {
-            this.Nombre = nombre;
+            this.Nombre = nombre.ToUpper();
             jefes = new ObservableCollection<Jefe>();
         }
     }
@@ -168,7 +275,6 @@ namespace Practica05_WPF_TreeView_JADF
         }
     }
 
-
     public abstract class Persona
     {
         private string nombre;
@@ -178,8 +284,8 @@ namespace Practica05_WPF_TreeView_JADF
 
         public Persona(string nombre, string apellido)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
+            this.nombre = nombre.ToUpper();
+            this.apellido = apellido.ToUpper();
         }
 
         public string Nombre { get => nombre; set => nombre = value; }

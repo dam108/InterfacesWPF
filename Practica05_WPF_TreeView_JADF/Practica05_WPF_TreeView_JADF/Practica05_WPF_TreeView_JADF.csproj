@@ -95,5 +95,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="carpetaCerrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="carpetaAbierta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="archivoAbierto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\archivo.png" />
+    <Resource Include="icons\archivoAbierto.png" />
+    <Resource Include="icons\carpetaAbierta.png" />
+    <Resource Include="icons\carpetaCerrada.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
