@@ -1,0 +1,80 @@
+﻿<Window x:Class="Practica06_WPF_SDI_JADF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica06_WPF_SDI_JADF"
+        mc:Ignorable="d"
+        Title="Doval Fraga Jose Angel Practica 06 WPF" Height="350" Width="1000" FontSize="14"
+        Background="{DynamicResource DegradadoVentanaPrincipal}"
+        >
+    <!--Enlazes a los comandos personalizados -->
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:MainWindow.lanzarHijaACommand}"
+                    Executed="ExecutelanzarHijaACommand"
+                    CanExecute="CanExecutelanzarHijaACommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.lanzarHijaBCommand}"
+                    Executed="ExecutelanzarHijaBCommand"
+                    CanExecute="CanExecutelanzarHijaBCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.lanzarHijaCCommand}"
+                    Executed="ExecutelanzarHijaCCommand"
+                    CanExecute="CanExecutelanzarHijaCCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.MostrarCommand}"
+                    Executed="ExecuteMostrarCommand"
+                    CanExecute="CanExecuteMostrarCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.OcultarCommand}"
+                    Executed="ExecuteOcultarCommand"
+                    CanExecute="CanExecuteOcultarCommand" />
+        <CommandBinding Command="{x:Static local:MainWindow.CerrarCommand}"
+                    Executed="ExecuteCerrarCommand"
+                    CanExecute="CanExecuteCerrarCommand" />
+    </Window.CommandBindings>
+
+    <!-- FIN Enlazes a los comandos personalizados -->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="150" HorizontalAlignment="Left">
+                <StackPanel Margin="10,20" >
+                    <Button x:Name="hijaA_Btn" Content="Hija A" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.lanzarHijaACommand}" />
+                    <Button x:Name="hijaB_Btn" Content="Hija B" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.lanzarHijaBCommand}" />
+                    <Button x:Name="hijaC_Btn" Content="Hija C" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.lanzarHijaCCommand}"/>
+                </StackPanel>
+            </Border>
+            <GroupBox Header="Mostrar" Foreground="White" Margin="10,20" Width="125">
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <RadioButton x:Name="mostrar_TipoA_rbt" Content="Tipo A"></RadioButton>
+                    <RadioButton x:Name="mostrar_TipoB_rbt" Content="Tipo B"></RadioButton>
+                    <RadioButton x:Name="mostrar_TipoC_rbt" Content="Tipo C" ></RadioButton>
+                    <RadioButton x:Name="mostrar_Todas_rbt" Content="Todas"></RadioButton>
+                    <Button x:Name="mostar_Rbt_Btn" Content="Mostrar" Margin="0,30,0,0" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.MostrarCommand}" CommandParameter="1" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Ocultar" Foreground="White" Margin="10,20" Width="125">
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <RadioButton x:Name="ocultar_TipoA_rbt" Content="Tipo A"></RadioButton>
+                    <RadioButton x:Name="ocultar_TipoB_rbt" Content="Tipo B"></RadioButton>
+                    <RadioButton x:Name="ocultar_TipoC_rbt" Content="Tipo C" ></RadioButton>
+                    <RadioButton x:Name="ocultar_Todas_rbt" Content="Todas"></RadioButton>
+                    <Button x:Name="ocultar_Rbt_Btn" Content="Ocultar" Margin="0,30,0,0" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.OcultarCommand}" CommandParameter="1" />
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Ventanas hijas" Foreground="White" Margin="10,20">
+                <StackPanel Orientation="Vertical" Margin="10">
+                    <ListBox x:Name="ventanas_ListBox" Height="140" Width="500" ItemsSource="{Binding Path=ventanas}" DisplayMemberPath="TituloCompleto" />
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0"  Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Button x:Name="mostar_list_Btn" Content="Mostrar" Height="30" Width="100" Padding="10,0,10,0" Margin="10,0,10,0" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.MostrarCommand}" CommandParameter="2" />
+                        <Button x:Name="ocultar_list_Btn" Content="Ocultar" Height="30" Width="100" Padding="10,0,10,0" Margin="10,0,10,0" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.OcultarCommand}" CommandParameter="2" />
+                        <Button x:Name="cerrar_list_Btn" Content="Cerrar" Height="30" Width="100" Padding="10,0,10,0" Margin="10,0,10,0" Style="{DynamicResource RoundCorner}" Command="{x:Static local:MainWindow.CerrarCommand}" />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Label x:Name="numeroVentanas_Lbl" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Foreground="White"/>
+
+    </Grid>
+</Window>
