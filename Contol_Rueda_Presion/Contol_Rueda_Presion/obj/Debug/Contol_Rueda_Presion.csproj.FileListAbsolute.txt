@@ -1,0 +1,12 @@
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\bin\Debug\Contol_Rueda_Presion.dll
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\bin\Debug\Contol_Rueda_Presion.pdb
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Rueda.g.cs
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion_MarkupCompile.cache
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion_MarkupCompile.lref
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Rueda.baml
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.g.resources
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.Properties.Resources.resources
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.csproj.GenerateResource.cache
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.csproj.CoreCompileInputs.cache
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.dll
+E:\Segundo Curso\Interfaces\WPF\Contol_Rueda_Presion\Contol_Rueda_Presion\obj\Debug\Contol_Rueda_Presion.pdb

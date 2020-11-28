@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<neumaticos>
+  <neumatico>
+    <posicion>DI</posicion>
+    <presion>1,9</presion>
+    <optima>2,3</optima>
+  </neumatico>
+  <neumatico>
+    <posicion>DD</posicion>
+    <presion>1,9</presion>
+    <optima>2,3</optima>
+  </neumatico>
+  <neumatico>
+    <posicion>TI</posicion>
+    <presion>0,8</presion>
+    <optima>2,5</optima>
+  </neumatico>
+  <neumatico>
+    <posicion>TD</posicion>
+    <presion>3,3</presion>
+    <optima>2,5</optima>
+  </neumatico>
+</neumaticos>

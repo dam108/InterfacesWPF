@@ -8,3 +8,6 @@ Muy buen trabajo
 
 ## Actualizacion 27/11/2020
 ### Se acaba la practica 6
+
+## Actualizacion 29/11/2020
+### Se acaba la practica 8, la 7 esta sin empezar

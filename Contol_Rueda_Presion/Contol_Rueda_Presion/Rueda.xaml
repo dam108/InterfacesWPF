@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Contol_Rueda_Presion.Rueda"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Contol_Rueda_Presion"
+             mc:Ignorable="d" 
+             d:DesignHeight="230" d:DesignWidth="400"
+             Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"
+             FontSize="14"
+             FontWeight="Bold">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="rueda_Lbl" Content="Rueda" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <Button x:Name="menos_Btn" Content="-" Margin="2" Width="129" FontSize="48" Click="menos_Btn_Click"/>
+            <TextBox x:Name="presion_TextBox" Margin="2" Width="129" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" TextChanged="presion_TextBox_TextChanged"/>
+            <Button x:Name="mas_Btn" Margin="2" Width="129" Content="+" FontSize="48" Click="mas_Btn_Click" />
+        </StackPanel>
+        <ProgressBar x:Name="presion_progressBar" Grid.Row="2" Margin="5" Value="1" Maximum="40"/>
+        <DockPanel Grid.Row="3" Margin="1" >
+            <Label DockPanel.Dock="Left" FontSize="10">0 Bar</Label>
+            <Label DockPanel.Dock="Right" FontSize="10">4 Bar</Label>
+            <Label></Label>
+        </DockPanel>
+    </Grid>
+</UserControl>
