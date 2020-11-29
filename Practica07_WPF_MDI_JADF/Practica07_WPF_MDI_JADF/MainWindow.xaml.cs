@@ -45,17 +45,29 @@ namespace Practica07_WPF_MDI_JADF
 
         private void mnuOrganiza_Videos_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("New");
+            ventanas.Add(new OrganizarVideos_Window());
+            ventanas[contarTodas() - 1].Show();
         }
 
         private void mnuSalir_Click(object sender, RoutedEventArgs e)
         {
+            foreach (var ventana in ventanas)
+            {
+                ventana.Close();
+            }
+
             App.Current.Shutdown();
         }
 
         private int contarTodas()
         {
             return ventanas.Count();
+        }
+
+        private void ventanas_ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int n = ventanas_ListBox.SelectedIndex;
+            ventanas[n].Activate();
         }
     }
 }

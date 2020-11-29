@@ -17,3 +17,9 @@ E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\
 E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\BuscarPalabra_Window.baml
 E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\EncriptaGif_Window.g.cs
 E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\EncriptaGif_Window.baml
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\OrganizarVideos_Window.g.cs
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\OrganizarVideos_Window.baml
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\bin\Debug\LibreiraRecursos.dll
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\bin\Debug\LibreiraRecursos.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\App.baml
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\Practica07_WPF_MDI_JADF\obj\Debug\Practica07_WPF_MDI_JADF.csproj.CopyComplete

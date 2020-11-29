@@ -6,18 +6,8 @@
         xmlns:local="clr-namespace:Practica07_WPF_MDI_JADF"
         mc:Ignorable="d"
         Title="Doval Fraga Jose Angel Doval Practia 07 MDI WPF" Height="450" Width="800" FontSize="14" >
-    <!--<Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-    </Grid>-->
     <DockPanel>
-        <Menu DockPanel.Dock="top">
+        <Menu DockPanel.Dock="top" Height="auto">
             <MenuItem Header="_Archivo">
                 <MenuItem Header="_Busca Palabra" Click="mnuBusca_Palabras_Click"/>
                 <MenuItem Header="_Encripta GIF" Click="mnuEncripta_Gif_Click" />
@@ -26,14 +16,15 @@
                 <MenuItem Header="_Salir" Click="mnuSalir_Click"/>
             </MenuItem>
             <MenuItem Header="_Ventanas">
-                <ListBox x:Name="ventanas_ListBox" ItemsSource="{Binding ventanas}">
+                <ListBox x:Name="ventanas_ListBox" ItemsSource="{Binding ventanas}" SelectionChanged="ventanas_ListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Title}"/>
+                            <Label Content="{Binding Title}"/>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </MenuItem>
         </Menu>
+        <Label Visibility="Hidden"/>
     </DockPanel>
 </Window>

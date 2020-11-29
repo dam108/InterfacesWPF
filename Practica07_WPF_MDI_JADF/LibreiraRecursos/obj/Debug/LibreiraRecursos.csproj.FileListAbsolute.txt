@@ -1,0 +1,12 @@
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\bin\Debug\LibreiraRecursos.dll
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\bin\Debug\LibreiraRecursos.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos_MarkupCompile.cache
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos_MarkupCompile.lref
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\Diccionario.baml
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.g.resources
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.Properties.Resources.resources
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.csproj.GenerateResource.cache
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.csproj.CoreCompileInputs.cache
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.dll
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.pdb
+E:\Segundo Curso\Interfaces\WPF\Practica07_WPF_MDI_JADF\LibreiraRecursos\obj\Debug\LibreiraRecursos.csprojAssemblyReference.cache

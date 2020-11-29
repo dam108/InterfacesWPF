@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica07_WPF_MDI_JADF"
         mc:Ignorable="d"
-        Title="EncriptaGif_Window" Height="455" Width="805">
+        Title="Encriptar Gif" Height="455" Width="805">
     
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static local:EncriptaGif_Window.EncriptarArchivoCommand}"

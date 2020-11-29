@@ -11,3 +11,6 @@ Muy buen trabajo
 
 ## Actualizacion 29/11/2020
 ### Se acaba la practica 8, la 7 esta sin empezar
+
+# Actualizacion 29/11/2020
+### Se acaban todas las practicas en WPF
