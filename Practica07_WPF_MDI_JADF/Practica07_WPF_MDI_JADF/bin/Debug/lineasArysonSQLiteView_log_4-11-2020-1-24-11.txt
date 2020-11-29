@@ -1,0 +1,1 @@
+Scanning process for selected file has been completed successfully.

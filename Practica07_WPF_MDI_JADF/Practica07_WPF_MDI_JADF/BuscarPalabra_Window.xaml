@@ -1,0 +1,42 @@
+﻿<Window x:Class="Practica07_WPF_MDI_JADF.BuscarPalabra_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica07_WPF_MDI_JADF"
+        mc:Ignorable="d"
+        Title="Buscar Palabra" Height="455" Width="705">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:BuscarPalabra_Window.BuscarCommand}"
+                    Executed="ExecuteBuscarCommand"
+                    CanExecute="CanExecuteBuscarCommand" />
+    </Window.CommandBindings>
+
+        <Grid>
+        <RichTextBox x:Name="mostrarTexto_RichTextBox" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="366">
+            <RichTextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Abrir Documento" Click="AbirDocumento_Click"/>
+                </ContextMenu>
+            </RichTextBox.ContextMenu>
+        </RichTextBox>
+        <ListBox x:Name="mostrarLineas_ListBox" HorizontalAlignment="Left" Height="239" Margin="417,170,0,0" VerticalAlignment="Top" Width="265"
+                ItemsSource="{Binding Path=lineas}" DisplayMemberPath="NombreMostrar">
+            
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Borrar Linea" Click="BorrarLinea_Click"/>
+                    <MenuItem Header="Copiar Linea a otro archivo" Click="CopiarLinea_Click"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+
+
+        </ListBox>
+
+        <TextBox x:Name="palabraBuscar_TextBox" HorizontalAlignment="Left" Height="23" Margin="562,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="palabraBuscar_TextBox_TextChanged"/>
+        <Label Content="Palabra a Buscar" HorizontalAlignment="Left" Margin="443,70,0,0" VerticalAlignment="Top" Width="114"/>
+        <Button x:Name="buscar_Btn" Content="Buscar" HorizontalAlignment="Left" Margin="569,135,0,0" VerticalAlignment="Top" Width="113" Height="30"
+                Command="{x:Static local:BuscarPalabra_Window.BuscarCommand}"/>
+    </Grid>
+</Window>

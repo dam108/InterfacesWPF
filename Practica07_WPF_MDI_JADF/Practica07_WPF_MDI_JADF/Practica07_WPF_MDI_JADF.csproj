@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74D27915-2170-4C76-B15E-2AF0A7DABE6F}</ProjectGuid>
+    <ProjectGuid>{8A80BD24-E7E8-40F3-9D38-BC0C9CC067B6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Practica07_WPF_MDI_JADF</RootNamespace>
     <AssemblyName>Practica07_WPF_MDI_JADF</AssemblyName>
@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BuscarPalabra_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EncriptaGif_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +72,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BuscarPalabra_Window.xaml.cs">
+      <DependentUpon>BuscarPalabra_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EncriptaGif_Window.xaml.cs">
+      <DependentUpon>EncriptaGif_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImagenGIF.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica07_WPF_MDI_JADF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Doval Fraga Jose Angel Doval Practia 07 MDI WPF" Height="450" Width="800" FontSize="14" >
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>-->
+    <DockPanel>
+        <Menu DockPanel.Dock="top">
+            <MenuItem Header="_Archivo">
+                <MenuItem Header="_Busca Palabra" Click="mnuBusca_Palabras_Click"/>
+                <MenuItem Header="_Encripta GIF" Click="mnuEncripta_Gif_Click" />
+                <MenuItem Header="_Organiza Videos" Click="mnuOrganiza_Videos_Click" />
+                <Separator/>
+                <MenuItem Header="_Salir" Click="mnuSalir_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Ventanas">
+                <ListBox x:Name="ventanas_ListBox" ItemsSource="{Binding ventanas}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </MenuItem>
+        </Menu>
+    </DockPanel>
 </Window>
